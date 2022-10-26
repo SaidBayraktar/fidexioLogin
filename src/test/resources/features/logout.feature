@@ -3,7 +3,7 @@ Feature: Log out Functionality
   Background:
     Given user is already logged in and is on the homepage
 
-
+@wip
   Scenario: User can log out and ends up in login page
     When user clicks on the username module
     Then user clicks on the log out dropdown option

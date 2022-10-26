@@ -17,8 +17,16 @@ public class LoginPage {
     public WebElement password;
 
     @FindBy(xpath = "//button[.='Log in']")
-    public WebElement button;
+    public WebElement loginButton;
+
+    @FindBy(xpath = "//span[@class='oe_topbar_name']")
+    public WebElement userID;
 
 
+    @FindBy(xpath = "//p[@class='alert alert-danger']")
+    public WebElement wrongAlert;
 
+
+    @FindBy(xpath = "//input[contains(@required,'required')]")
+    public WebElement fillAlert;
 }
