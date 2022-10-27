@@ -1,15 +1,16 @@
+@FIDE-1442
 Feature: Log out Functionality
 
   Background:
     Given user is already logged in and is on the homepage
 
-
+  @FIDE-1439
   Scenario: User can log out and ends up in login page
     When user clicks on the username module
     Then user clicks on the log out dropdown option
     And user lands on the login page
 
-  @wip
+  @FIDE-1440
     Scenario: The user can not go to the home page again by clicking the step back button after successfully logged out
       When user clicks on the username module
       Then user clicks on the log out dropdown option

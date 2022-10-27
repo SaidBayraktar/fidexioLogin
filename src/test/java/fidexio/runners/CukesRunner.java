@@ -10,12 +10,13 @@ import org.junit.runner.RunWith;
                 //"pretty",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
+                "json:target/cucumber.json",
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber",
         },
         features = "src/test/resources/features",
         glue = "fidexio/step_definition",
         dryRun = false,
-        tags = ""
+        tags = "@FIDE-1442"
 
 
 )
