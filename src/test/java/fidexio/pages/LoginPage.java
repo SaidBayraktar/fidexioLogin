@@ -1,5 +1,6 @@
 package fidexio.pages;
 
+import fidexio.utilities.ConfigurationReader;
 import fidexio.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,4 +30,37 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[contains(@required,'required')]")
     public WebElement fillAlert;
+
+
+    public void login(){
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+        username.sendKeys(ConfigurationReader.getProperty("validUsernamePos"));
+        password.sendKeys(ConfigurationReader.getProperty("validPasswordPos"));
+        loginButton.click();
+    }
+
+    @FindBy(xpath = "//a[@data-menu=\"logout\"]")
+    public WebElement userLogout;
+
+    @FindBy(xpath = "//h4[@class=\"modal-title\"]")
+    public WebElement sessionExp;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

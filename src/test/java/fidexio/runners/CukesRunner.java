@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "fidexio/step_definition",
-        dryRun = true,
-        tags = "@wip"
+        dryRun = false,
+        tags = ""
 
 
 )
